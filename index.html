@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مصر الرقمية</title>
+    <link rel="icon" type="image/jpeg" href="img/logo.jpeg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg p-0 px-lg-5">
+      <div class="container-fluid container-xl p-0 px-lg-5">
+        <a class="navbar-brand" href="#"
+          ><img style="height: 80px" src="img/nav-img.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler ms-4 border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-between mx-5"
+          id="navbarText"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">تصفح الخدمات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">دليل الجهات الحكومية</a>
+            </li>
+          </ul>
+          <div class="d-flex column-gap-4">
+            <button class="btn rounded-5 px-3 p-2 text-white fw-bold">
+              <i class="fa-regular fa-user"></i> تسجيل الدخول
+            </button>
+            <button
+              class="btn rounded-5 px-3 p-2 text-black text-dark"
+              style="background-color: var(--light)"
+            >
+              <i class="fa-solid fa-bars mx-1"></i>المزيد
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main style="background-color: var(--light)" class="pb-5 position-relative">
+      <div class="container-fluid container-lg p-4 pb-0 pb-lg-4">
+        <div
+          class="p-0 py-lg-5 d-flex flex-column justify-content-center align-items-center"
+        >
+          <div>
+            <h1 class="fw-bold main-h1" style="font-size: 40px; color: #374151">
+              أى خدمة؟
+            </h1>
+          </div>
+          <div>
+            <p class="my-3 fs-5 text-center">
+              وفر وقتك و استفد من خدمات مصر الرقمية فى دقائق معدودة
+            </p>
+          </div>
+          <!-- search bar -->
+          <div class="col-12 col-md-8 col-xl-7">
+            <div
+              class="input-group mb-3 bg-white p-3 shadow-sm rounded-4 d-flex justify-content-center align-items-center my-3"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                class="form-control border-0 fs-5"
+                placeholder="أنا محتاج..."
+                aria-label="Example text with button addon"
+                aria-describedby="button-addon1"
+              />
+              <button
+                class="btn rounded-5 px-4 p-2 fw-bold text-white"
+                id="button-addon1"
+              >
+                ابحث
+              </button>
+            </div>
+          </div>
+          <!-- end search bar -->
+          <!-- اشهر الخدمات -->
+          <div
+            class="d-flex align-items-center gap-2 flex-wrap py-2 justify-content-center mb-lg-2 mb-0"
+          >
+            <p class="m-0">أشهر الخدمات:</p>
+            <button class="btn btn-outline-dark light-btn rounded-5">
+              <a href="" class="">التأمين الأجتماعي</a>
+            </button>
+            <button class="btn btn-outline-dark light-btn rounded-5">
+              <a href="" class="">التموين</a>
+            </button>
+            <button
+              class="btn btn-outline-dark light-btn rounded-5 d-none d-md-inline-block"
+            >
+              <a href="" class="">مركباتي</a>
+            </button>
+            <button
+              class="btn btn-outline-dark light-btn rounded-5 d-none d-md-inline-block"
+            >
+              <a href="" class="">رخصى</a>
+            </button>
+            <button
+              class="btn btn-outline-dark light-btn rounded-5 d-none d-md-inline-block"
+            >
+              <a href="" class="">السجل التجارى</a>
+            </button>
+            <button
+              class="btn btn-outline-dark light-btn rounded-5 d-none d-md-inline-block"
+            >
+              <a href="" class="">التوثيق</a>
+            </button>
+            <button
+              class="btn btn-outline-dark light-btn rounded-5 d-none d-md-inline-block"
+            >
+              <a href="" class=""> المحاكم</a>
+            </button>
+            <button class="btn btn-outline-dark light-btn rounded-5 d-md-none">
+              <a href="" class=""> المزيد +</a>
+            </button>
+          </div>
+          <!-- نهايه اشهر الخدمات -->
+        </div>
+      </div>
+    </main>
+
+    <!-- 2 options div -->
+    <section>
+      <div class="container-fluid container-xl p-0">
+        <div
+          class="d-flex justify-content-center gap-1 option-parent align-items-center flex-column flex-lg-row py-5 py-md-0"
+        >
+          <!-- item 1 -->
+          <div
+            class="d-flex justify-content-start align-items-center gap-4 bg-white shadow-sm option-item-1 rounded-5 col-lg-6 col-sm-10 col-md-9 justify-content-lg-center p-2 col-xl-5"
+          >
+            <div
+              class="rounded-circle circle-icon-1 d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-regular fa-user fs-1 icon text-white"></i>
+            </div>
+            <div>
+              <h4>افتح حساب أو سجِّل الدخول</h4>
+              <p class="text-secondary mt-lg-3 mt-1" style="font-size: 18px">
+                اشترك وكن جزءاً من مصر الرقمية
+              </p>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div
+            class="d-flex justify-content-start align-items-center gap-4 bg-white shadow-sm option-item-2 rounded-5 col-lg-6 col-sm-10 col-md-9 p-2 justify-content-lg-center col-xl-5"
+          >
+            <div
+              class="rounded-circle circle-icon-2 d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-plus fs-1 icon text-white"></i>
+            </div>
+            <div>
+              <h4>تصفح كل الخدمات</h4>
+              <p class="text-secondary" style="font-size: 18px">
+                تصفح جميع خدمات مصر الرقمية الآن
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end 2 options div -->
+
+    <!-- اريد معرفه المزيد عن -->
+    <section>
+      <div class="container-fluid container-lg px-lg-5 mt-4 mt-lg-0 mb-5">
+        <!-- parent div -->
+        <div class="px-0 px-md-5">
+          <h2 style="font-size: 36px" class="h2-sec3">
+            كل الخدمات والبيانات الحكومية فى مكان واحد
+          </h2>
+          <div class="d-flex mt-3">
+            <span
+              style="width: 7px; background-color: var(--a-color)"
+              class="ms-2 rounded-5"
+            ></span>
+            <h2 style="color: var(--a-color)" class="fw-bold p-sec3">
+              أريد معرفة المزيد عن..
+            </h2>
+          </div>
+          <!-- all container -->
+          <div class="container-md mt-3 p-0">
+            <div class="row g-3">
+              <!-- Item 1 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>عدالة مصر الرقمية</h5>
+                    <p class="text-secondary">
+                      خدمات متعلقة بالنواحي الجنائية والمدنية والاقتصادية
+                      والإدارية
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- Item 2 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>المرافق</h5>
+                    <p class="text-secondary">
+                      خدمات متعلقة بالسكن كالكهرباء والمياة والغاز والصرف الصحى
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- Item 3 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>التعليم و الجامعات</h5>
+                    <p class="text-secondary">
+                      خدمات متعلقة بالتعليم العالى والجامعات وخدمات التنسيق
+                      والتعليم الإلكتروني وغيره
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- Item 4 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>الحماية الاجتماعية</h5>
+                    <p class="text-secondary">
+                      خخدمات متعلقة بالدعم الإجتماعى كالبرامج الإجتماعية والعلاج
+                      على نفقة الدولة والتمويل العقارى وغيرها
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- Item 5 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>الملكيات</h5>
+                    <p class="text-secondary">
+                      خدمات متعلقة بالشهر العقارى والسجل العيني الزراعي والحضري
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- Item 6 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>الخدمات المدنية</h5>
+                    <p class="text-secondary">
+                      خدمات متعلقة بالأحوال الشخصية والأحوال المدنية والتوثيق
+                      والمرور
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- Item 7 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>الشركات و المنشئآت</h5>
+                    <p class="text-secondary">
+                      خدمات متعلقة بالنواحي الجنائية والمدنية والاقتصادية
+                      والإدارية
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- Item 8 -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div
+                    class="border border-light-subtle px-3 py-4 rounded-4 h-100"
+                  >
+                    <h5>السفر و الانتقال</h5>
+                    <p class="text-secondary">
+                      خدمات متعلقة بالسفر الداخلى والخارجى
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <!-- end item 8 -->
+            </div>
+          </div>
+          <!-- all container -->
+        </div>
+        <!-- parent div -->
+      </div>
+    </section>
+    <!-- اريد معرفه المزيد عن -->
+
+    <!-- خدمات مصر الرقميه-->
+    <section style="background-color: var(--light)" class="p-3 p-md-5">
+      <div class="container-fluid container-lg px-lg-5 p-0 mt-4">
+        <!-- parent div -->
+        <div class="px-0 px-xl-3">
+          <!-- head -->
+          <div
+            class="d-flex justify-content-between px-xl-4 align-items-center pt-5"
+          >
+            <div class="font-for-options">
+              <h2>خدمات مصر الرقمية</h2>
+              <p class="text-secondary" style="font-size: 12px">
+                اختر الخدمة التى تناسبك من الخدمات المعروضة
+              </p>
+            </div>
+            <a href="">
+              <button
+                class="btn rounded-5 fw-bold border-2 d-none d-lg-inline-block"
+                style="
+                  border-color: #285ebe;
+                  color: #285ebe;
+                  background-color: var(--light);
+                "
+              >
+                عرض كل الخدمات
+              </button>
+            </a>
+          </div>
+          <!-- scrollable buttons -->
+          <div class="container-md mt-3 px-xl-4 d-none d-lg-inline-block">
+            <div class="container mt-5 p-0">
+              <div
+                class="scrollable-tabs-container bg-white rounded p-3 overflow-hidden position-relative d-flex align-items-center"
+              >
+                <!-- Right Arrow -->
+                <div
+                  class="right-arrow rounded-circle border-secondary border p-2 h-100 align-items-center bg-white"
+                  style="cursor: pointer; z-index: 2"
+                >
+                  <i class="fa-solid fa-angle-right fs-5 text-dark"></i>
+                </div>
+
+                <!-- Tabs List -->
+                <ul
+                  class="d-flex m-0 align-items-center overflow-x-scroll"
+                  id="tabs-list"
+                >
+                  <li>
+                    <button
+                      href="#"
+                      class="border-0 bg-white user-select-none text-nowrap rounded-5 p-2 px-5 text-secondary active"
+                      style="font-size: 18px"
+                    >
+                      التموين
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Left Arrow -->
+                <div
+                  class="left-arrow rounded-circle border-secondary border p-2 h-100 align-items-center bg-white active"
+                  style="cursor: pointer; z-index: 2"
+                >
+                  <i class="fa-solid fa-chevron-left fs-5 text-dark"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- scrollable buttons -->
+
+          <!-- content divs -->
+          <div class="container-md px-xl-4">
+            <div class="px-4 row mx-3 mt-2 mx-xl-0" id="services-content">
+              <!-- item in lg screen -->
+              <div class="col-xl-4 col-12">
+                <a href="">
+                  <div class="px-3 py-4 rounded-4 h-100">
+                    <p class="fw-light" style="color: #1c304c; font-size: 18px">
+                      تفعيل بطاقة تموين
+                    </p>
+                    <p class="text-secondary">
+                      تُمكّنك هذه الخدمة من تفعيل بطاقتك التموينية
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- accordion on small screen -->
+            <div class="accordion accordion-flush" id="accordionForOptions">
+              <!-- item  -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionForOptions"
+                >
+                  <div class="accordion-body" id="accordion-body">
+                    <!-- chiled item -->
+                    <div>
+                      <a href="">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <div>
+                            <p class="m-0" style="color: #1c304c">kjnn</p>
+                            <p class="m-0 text-secondary">jknlikn</p>
+                          </div>
+                          <div>
+                            <i class="fa-solid fa-angle-left"></i>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- chiled item -->
+                  </div>
+                </div>
+              </div>
+              <!-- item end -->
+            </div>
+          </div>
+          <!-- content divs -->
+
+          <!-- show more button -->
+          <div class="text-center">
+            <button
+              class="btn bg-white fw-bold col-12 col-md-4 px-0 py-2 rounded-4 shadow-lg"
+            >
+              + عرض المزيد
+            </button>
+          </div>
+        </div>
+        <!-- parent div -->
+      </div>
+    </section>
+    <!-- اريد معرفه المزيد عن -->
+
+    <!-- 2 Cards Section -->
+    <section>
+      <div class="container-fluid">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <!-- Card 1 -->
+          <div class="card mb-4 border-0 col-xl-9 col-12">
+            <div class="row g-0 align-items-center">
+              <!-- Image Column -->
+              <div class="col-lg-6">
+                <img
+                  src="img/2.jpg"
+                  class="img-fluid rounded-start w-100 h-100"
+                  alt="..."
+                  style="object-fit: cover"
+                />
+              </div>
+              <!-- Text Column -->
+              <div class="col-lg-6 d-flex align-items-center">
+                <div class="card-body p-4 p-md-0">
+                  <h2
+                    class="card-title"
+                    style="
+                      font-size: 2.25rem;
+                      line-height: 1.375;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    قرَّبنا إليك كل ما تحتاج إليه، استخدم مصر الرقمية من جهازك
+                    الذكى أو محمولك وادفع بالطريقة التى تناسبك
+                  </h2>
+                  <p class="card-text">
+                    بوابة مصر الإلكترونية تقدم لك كل الخدمات الحكومية بطريقة
+                    فورية وسهلة وأنت فى مكانك!
+                  </p>
+                  <p class="card-text text-secondary">
+                    تابعنا، لمعرفة مزيٍد عن الخدمات الحكومية التى سُتضاف للموقع
+                    يمكنك تنزيل تطبيق الخدمات الرقمية
+                  </p>
+                  <a href="#">
+                    <button
+                      class="btn rounded-5 fw-bold border-2 bg-white mt-4 col-12 col-md-6 col-lg-4 text-nowrap"
+                      style="border-color: #285ebe; color: #285ebe"
+                    >
+                      تصفَح الخدمات
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 1 -->
+          <!-- Card 2 -->
+          <div class="card mb-4 border-0 col-xl-9 col-12">
+            <div class="row g-0 align-items-center">
+              <!-- Text Column -->
+              <div class="col-lg-6 d-flex align-items-center">
+                <div class="card-body p-4 p-md-0">
+                  <h2
+                    class="card-title"
+                    style="
+                      font-size: 2.25rem;
+                      line-height: 1.375;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    تعرف على حكومة مصر الرقمية بشكلها الجديد
+                  </h2>
+                  <p class="card-text">
+                    ببوابة الخدمات الحكومية منصة تقدم لكم الخدمات الحكومية
+                    الرقمية بشكل ميسر وشخصى وحديث، عبر التحول الرقمى.
+                  </p>
+                  <p class="card-text text-secondary">
+                    تتابعنا هنا للتعرف على الخدمات الحكومية الجديدة التى ستضاف
+                    تباعاً. كما يمكنك تحميل التطبيق باسم الخدمات الرقمية
+                  </p>
+                  <a href="#">
+                    <button
+                      class="btn rounded-5 fw-bold border-2 bg-white mt-4 col-12 col-md-6 col-lg-4 text-nowrap"
+                      style="border-color: #285ebe; color: #285ebe"
+                    >
+                      تصفَح الخدمات
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <!-- Image Column -->
+              <div class="col-lg-6">
+                <img
+                  src="img/1.jpg"
+                  class="img-fluid rounded-start w-100 h-100"
+                  alt="..."
+                  style="object-fit: cover"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+        </div>
+      </div>
+    </section>
+    <!-- 2 Cards Section -->
+
+    <!-- Emergency Numbers Section -->
+    <section>
+      <div class="container-md p-4 col-lg-10 col-xl-10 col-xxl-9 col-12">
+        <div class="py-0 py-md-5">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">أرقام الطوارئ</h2>
+          </div>
+          <div class="row gap-4 row-gap-md-5 gap-xl-0">
+            <!-- Item 1 -->
+            <div class="col-12 col-md-12 col-xl-4">
+              <div
+                class="shadow-sm p-4 py-4 py-lg-4 rounded-4"
+                style="background-color: #f4f4f4"
+              >
+                <p class="fw-bold mb-4" style="font-size: 50px">122</p>
+                <div
+                  class="d-flex justify-content-start align-items-center gap-3"
+                >
+                  <div
+                    class="rounded-circle p-2"
+                    style="background-color: var(--dark-green)"
+                  >
+                    <i class="fa-solid fa-phone text-white"></i>
+                  </div>
+                  <p class="m-0 fs-5">النجدة</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 1 -->
+            <!-- Item 2 -->
+            <div class="col-12 col-md-12 col-xl-4">
+              <div
+                class="shadow-sm p-4 py-4 py-lg-4 rounded-4"
+                style="background-color: #f4f4f4"
+              >
+                <p class="fw-bold mb-4" style="font-size: 50px">123</p>
+                <div
+                  class="d-flex justify-content-start align-items-center gap-3"
+                >
+                  <div
+                    class="rounded-circle p-2"
+                    style="background-color: var(--dark-green)"
+                  >
+                    <i class="fa-solid fa-bell text-white"></i>
+                  </div>
+                  <p class="m-0 fs-5">الإسعاف</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <!-- Item 3 -->
+            <div class="col-12 col-md-12 col-xl-4">
+              <div
+                class="shadow-sm p-4 py-4 py-lg-4 rounded-4"
+                style="background-color: #f4f4f4"
+              >
+                <p class="fw-bold mb-4" style="font-size: 50px">180</p>
+                <div
+                  class="d-flex justify-content-start align-items-center gap-3"
+                >
+                  <div
+                    class="rounded-circle p-2"
+                    style="background-color: var(--dark-green)"
+                  >
+                    <i class="fa-solid fa-bolt text-white"></i>
+                  </div>
+                  <p class="m-0 fs-5">استعلامات الكهرباء</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Emergency Numbers Section -->
+
+    <!-- most used services -->
+    <section>
+      <div class="container-md col-lg-10 col-xl-10 col-xxl-9 col-12 px-4">
+        <div class="d-flex flex-column flex-xl-row">
+          <!-- services -->
+          <div class="d-flex col-7 flex-wrap flex-column flex-xl-row">
+            <!-- item 1 -->
+            <div class="col-xl-6 mb-3">
+              <div>
+                <h4 class="fw-bold">الخدمات الاكثر استخداماً</h4>
+                <ul>
+                  <!-- list item 1 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن مخالفات ر...
+                    </a>
+                  </li>
+                  <!-- list item 1 -->
+                  <!-- list item 2 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن صرف
+                    </a>
+                  </li>
+                  <!-- list item 2 -->
+                  <!-- list item 3 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن أخر مدة...
+                    </a>
+                  </li>
+                  <!-- list item 3 -->
+                  <!-- list item 4 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن مدد الا...
+                    </a>
+                  </li>
+                  <!-- list item 4 -->
+                  <!-- list item 5 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن الرقم الت...
+                    </a>
+                  </li>
+                  <!-- list item 5 -->
+                </ul>
+              </div>
+            </div>
+            <!-- item 1 -->
+            <!-- item 2 -->
+            <div class="col-xl-6 mb-3 d-none d-md-inline-block">
+              <div>
+                <h4 class="fw-bold">الخدمات الاكثر استخداماً</h4>
+                <ul>
+                  <!-- list item 1 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن مخالفات ر...
+                    </a>
+                  </li>
+                  <!-- list item 1 -->
+                  <!-- list item 2 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن صرف
+                    </a>
+                  </li>
+                  <!-- list item 2 -->
+                  <!-- list item 3 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن أخر مدة...
+                    </a>
+                  </li>
+                  <!-- list item 3 -->
+                  <!-- list item 4 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن مدد الا...
+                    </a>
+                  </li>
+                  <!-- list item 4 -->
+                  <!-- list item 5 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن الرقم الت...
+                    </a>
+                  </li>
+                  <!-- list item 5 -->
+                </ul>
+              </div>
+            </div>
+            <!-- item 2 -->
+            <!-- item 3 -->
+            <div class="col-xl-6 mb-3 d-none d-md-inline-block">
+              <div>
+                <h4 class="fw-bold">الخدمات الاكثر استخداماً</h4>
+                <ul>
+                  <!-- list item 1 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن مخالفات ر...
+                    </a>
+                  </li>
+                  <!-- list item 1 -->
+                  <!-- list item 2 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن صرف
+                    </a>
+                  </li>
+                  <!-- list item 2 -->
+                  <!-- list item 3 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن أخر مدة...
+                    </a>
+                  </li>
+                  <!-- list item 3 -->
+                  <!-- list item 4 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن مدد الا...
+                    </a>
+                  </li>
+                  <!-- list item 4 -->
+                  <!-- list item 5 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن الرقم الت...
+                    </a>
+                  </li>
+                  <!-- list item 5 -->
+                </ul>
+              </div>
+            </div>
+            <!-- item 3 -->
+            <!-- item 4 -->
+            <div class="col-xl-6 mb-3 d-none d-md-inline-block">
+              <div>
+                <h4 class="fw-bold">الخدمات الاكثر استخداماً</h4>
+                <ul>
+                  <!-- list item 1 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن مخالفات ر...
+                    </a>
+                  </li>
+                  <!-- list item 1 -->
+                  <!-- list item 2 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن صرف
+                    </a>
+                  </li>
+                  <!-- list item 2 -->
+                  <!-- list item 3 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن أخر مدة...
+                    </a>
+                  </li>
+                  <!-- list item 3 -->
+                  <!-- list item 4 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      الاستعلام عن مدد الا...
+                    </a>
+                  </li>
+                  <!-- list item 4 -->
+                  <!-- list item 5 -->
+                  <li
+                    style="color: #285ebe"
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                    <a
+                      href=""
+                      style="color: var(--a-color) !important; font-size: 16px"
+                      class="custom-underline pb-1"
+                    >
+                      استعلام عن الرقم الت...
+                    </a>
+                  </li>
+                  <!-- list item 5 -->
+                </ul>
+              </div>
+            </div>
+            <!-- item 4 -->
+          </div>
+          <!-- services -->
+
+          <!-- colorful div -->
+          <div class="col-12 col-xl-5">
+            <div class="p-3 colorful rounded-4 text-white py-4">
+              <div class="d-flex flex-column">
+                <!-- top -->
+                <div class="d-flex align-items-center">
+                  <!-- rounded icon -->
+                  <a href="">
+                    <div
+                      style="
+                        width: 100px;
+                        background-color: #5187db;
+                        height: 100px;
+                      "
+                      class="d-flex justify-content-center align-items-center rounded-circle ms-3"
+                    >
+                      <i class="fa-solid fa-phone fs-2 text-white"></i>
+                    </div>
+                  </a>
+                  <!-- rounded icon -->
+
+                  <div>
+                    <h2 class="m-0" style="font-size: 30px">
+                      تحب نساعدك إزاي؟
+                    </h2>
+                    <p style="font-size: 36px" class="fw-bold">١٥٩٩٩</p>
+                  </div>
+                </div>
+                <!-- top -->
+                <hr class="text-white bg-white" />
+                <!-- bottom -->
+                <div class="py-3">
+                  <div>
+                    <h4>الدعم و المساعدة</h4>
+                    <ul>
+                      <!-- list item 1 -->
+                      <li class="text-white d-flex align-items-center mb-2">
+                        <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                        <a
+                          href=""
+                          style="font-size: 16px"
+                          class="text-white custom-underline pb-1"
+                        >
+                          الاسئلة الشائعة
+                        </a>
+                      </li>
+                      <!-- list item 1 -->
+                      <!-- list item 2 -->
+                      <li class="text-white d-flex align-items-center mb-2">
+                        <i class="fa-regular fa-circle-left ms-2 fs-5"></i>
+                        <a
+                          href=""
+                          style="font-size: 16px"
+                          class="text-white custom-underline pb-1"
+                        >
+                          الشكاوى و المقترحات
+                        </a>
+                      </li>
+                      <!-- list item 2 -->
+                    </ul>
+                  </div>
+                </div>
+                <!-- bottom -->
+              </div>
+            </div>
+          </div>
+          <!-- colorful div -->
+        </div>
+      </div>
+    </section>
+    <!-- most used services -->
+
+    <!-- happen now -->
+    <section style="background-color: #f4f4f4">
+      <div class="container-md p-4 col-lg-10 col-xl-10 col-xxl-9 col-12">
+        <div class="py-0 py-md-5">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">يحدث الآن</h2>
+          </div>
+          <div class="row gap-4 row-gap-md-5 gap-xl-0">
+            <!-- Item 1 -->
+            <div class="col-12 col-md-12 col-xl-3">
+              <div
+                class="bg-white shadow-sm p-4 py-4 py-lg-4 rounded-4 text-center"
+              >
+                <p class="fw-bold mb-1" style="font-size: 35px; color: #4a99f0">
+                  ٤٥٣٠١١٣٢
+                </p>
+                <p class="" style="font-size: 13px">
+                  اجمالى عدد الطلبات على مصر الرقمية
+                </p>
+              </div>
+            </div>
+            <!-- Item 1 -->
+            <!-- Item 2 -->
+            <div class="col-12 col-md-12 col-xl-3">
+              <div
+                class="bg-white shadow-sm p-4 py-4 py-lg-4 rounded-4 text-center"
+              >
+                <p class="fw-bold mb-1" style="font-size: 35px; color: #4a99f0">
+                  ٥٧٠٧
+                </p>
+                <p class="" style="font-size: 13px">عدد الطلبات امس</p>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <!-- Item 3 -->
+            <div class="col-12 col-md-12 col-xl-3">
+              <div
+                class="bg-white shadow-sm p-4 py-4 py-lg-4 rounded-4 text-center"
+              >
+                <p class="fw-bold mb-1" style="font-size: 35px; color: #4a99f0">
+                  ٧٩٨١٩١٣
+                </p>
+                <p class="" style="font-size: 13px">
+                  اجمالى عدد مستخدمين مصر الرقمية
+                </p>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <!-- Item 4 -->
+            <div class="col-12 col-md-12 col-xl-3">
+              <div
+                class="bg-white shadow-sm p-4 py-4 py-lg-4 rounded-4 text-center"
+              >
+                <p class="fw-bold mb-1" style="font-size: 35px; color: #4a99f0">
+                  ٣٩٤٣
+                </p>
+                <p class="" style="font-size: 13px">عدد المستخدمين الجدد امس</p>
+              </div>
+            </div>
+            <!-- Item 4 -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- happen now -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>

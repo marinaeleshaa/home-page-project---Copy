@@ -1,0 +1,319 @@
+:root {
+  --light-green: #f0fdfa;
+  --dark-green: #60baa7;
+  --font-color: black;
+  --a-color: #0d6efd;
+  --dark-blue: #1c4c9f;
+  --light: #f1f5f9;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+body {
+  font-family: "alfont_com_هلفيتيكا-عربي-", sans-serif;
+}
+
+@font-face {
+  font-family: "alfont_com_هلفيتيكا-عربي-";
+  src: url("../fonts/alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* general */
+a {
+  text-decoration: none;
+  color: var(--font-color) !important ;
+}
+
+button {
+  font-style: HelveticaNeue, sans-serif;
+}
+
+.btn {
+  background-color: var(--dark-blue);
+}
+.btn:hover {
+  background-color: #133570;
+  /* opacity: 0.5; */
+}
+input:focus {
+  box-shadow: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+/* ========================================================================= */
+/* navbar */
+.nav-link:hover {
+  color: var(--a-color) !important;
+}
+.navbar {
+  background-color: var(--light-green);
+  height: 80px;
+}
+
+/* =============================================================================== */
+/* main */
+.light-btn {
+  background-color: var(--light);
+}
+
+.light-btn:hover {
+  background-color: black;
+}
+
+.light-btn:hover a {
+  color: white !important;
+}
+
+@media (min-width: 768px) {
+  .main-h1 {
+    font-size: 3.75rem !important;
+  }
+}
+
+/* ============================================================================== */
+
+/* 2 options div */
+/* .option-parent {
+  background-color: var(--light);
+}
+
+.circle-icon-1,
+.circle-icon-2 {
+  background-color: transparent; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-item-1,
+.option-item-2 {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out; 
+} */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .option-parent {
+    background-color: var(--light);
+  }
+  .circle-icon-1,
+  .circle-icon-2 {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .option-item-1,
+  .option-item-2 {
+    padding: 20px 50px !important;
+    height: 150px;
+  }
+  .option-item-1 h4,
+  .option-item-2 h4 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .option-item-1 p,
+  .option-item-2 p {
+    font-size: 16px !important;
+    font-weight: 500;
+  }
+
+  .option-parent {
+    background-color: white !important;
+  }
+  
+  .h2-sec3 {
+    font-size: 30px !important;
+  }
+  .p-sec3 {
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle-icon-1,
+  .circle-icon-2 {
+    width: 90px;
+    height: 90px;
+  }
+  .option-parent {
+    background-color: var(--light) ;
+  }
+}
+
+.circle-icon-1 {
+  background-color: var(--dark-blue);
+}
+.circle-icon-2 {
+  background-color: var(--dark-green);
+}
+
+@media (min-width: 992px) {
+  .option-parent {
+    transform: translateY(-50%);
+    background-color: transparent;
+  }
+  .option-item-1:hover,
+  .option-item-2:hover {
+    height: 200px;
+    margin-top: -25px;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+  }
+  .option-item-1,
+  .option-item-2 {
+    padding: 30px 70px !important;
+    transition: 0.3s ease-in-out;
+    height: 175px;
+    margin-top: 0;
+  }
+  .option-item-1 {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+  }
+  .option-item-2 {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+  .circle-icon-1,
+  .circle-icon-2 {
+    width: 110px;
+    height: 110px;
+  }
+  .option-item-1 h4,
+  .option-item-2 h4 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .option-item-1 p,
+  .option-item-2 p {
+    font-size: 18px !important;
+    font-weight: 500;
+  }
+
+  .font-for-options h2 {
+    font-size: 36px;
+  }
+  .font-for-options p {
+    font-size: 24px !important;
+  }
+}
+
+.option-item-1:hover {
+  background-color: var(--dark-blue) !important;
+}
+
+.option-item-2:hover {
+  background-color: var(--dark-green) !important;
+}
+
+.option-item-1:hover h4,
+.option-item-2:hover h4 {
+  color: white !important;
+}
+
+.option-item-1:hover .circle-icon-1,
+.option-item-2:hover .circle-icon-2 {
+  background-color: white;
+}
+
+.option-item-1:hover .circle-icon-1 .icon {
+  color: var(--dark-blue) !important;
+}
+.option-item-2:hover .circle-icon-2 .icon {
+  color: var(--dark-green) !important;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+/* scrollable-tabs-container */
+
+.scrollable-tabs-container button.active {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  color: black !important;
+  display: inline-block;
+}
+
+.scrollable-tabs-container ul {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.scrollable-tabs-container ul li {
+  display: inline-block;
+}
+
+.scrollable-tabs-container ul::-webkit-scrollbar {
+  display: none;
+}
+
+.right-arrow {
+  display: none !important ;
+}
+.left-arrow,
+.right-arrow {
+  cursor: pointer;
+}
+
+.scrollable-tabs-container .left-arrow.active,
+.scrollable-tabs-container .right-arrow.active {
+  display: flex !important;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+
+.accordion-header button:focus {
+  box-shadow: none !important;
+  border: 0;
+  outline: 0;
+}
+
+/* Hide Bootstrap's default arrow */
+.accordion-button::after {
+  display: none !important;
+}
+
+
+/* Add a custom arrow */
+.accordion-button.custom-arrow::before {
+  display: inline-block !important;
+  content: "\25B2" !important;
+  color: black !important;
+  font-size: 16px !important;
+  transform: rotate(0deg) !important;
+  transition: transform 0.2s ease-in-out !important;
+  -webkit-transition: transform 0.2s ease-in-out !important;
+  -moz-transition: transform 0.2s ease-in-out !important;
+  -ms-transition: transform 0.2s ease-in-out !important;
+  -o-transition: transform 0.2s ease-in-out !important;
+}
+
+/* Change arrow when collapsed */
+.accordion-button.custom-arrow.collapsed::before {
+  content: "\25BC" !important;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.custom-underline {
+border-bottom: 1px solid #dde0e4;
+}
+
+.colorful {
+  background: linear-gradient(270deg, #3266e3, #54b5a6);
+}
+/* //// */
+/* ///// */
