@@ -130,7 +130,7 @@ ul {
   .option-parent {
     background-color: white !important;
   }
-  
+
   .h2-sec3 {
     font-size: 30px !important;
   }
@@ -146,7 +146,7 @@ ul {
     height: 90px;
   }
   .option-parent {
-    background-color: var(--light) ;
+    background-color: var(--light);
   }
 }
 
@@ -207,6 +207,12 @@ ul {
   }
   .font-for-options p {
     font-size: 24px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    padding: 160px 0px !important;
   }
 }
 
@@ -285,7 +291,6 @@ ul {
   display: none !important;
 }
 
-
 /* Add a custom arrow */
 .accordion-button.custom-arrow::before {
   display: inline-block !important;
@@ -305,11 +310,10 @@ ul {
   content: "\25BC" !important;
 }
 
-
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .custom-underline {
-border-bottom: 1px solid #dde0e4;
+  border-bottom: 1px solid #dde0e4;
 }
 
 .colorful {
