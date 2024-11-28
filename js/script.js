@@ -1,78 +1,78 @@
 const rightArrow = document.querySelector(
-  ".scrollable-tabs-container .right-arrow "
+  ".scrollable-tabs-container .right-arrow"
 );
 const leftArrow = document.querySelector(
-  ".scrollable-tabs-container .left-arrow "
+  ".scrollable-tabs-container .left-arrow"
 );
-
 const tabsList = document.getElementById("tabs-list");
 
+// Determine scroll direction and position
+const getScrollPosition = () => {
+  const isRTL = getComputedStyle(tabsList).direction === "rtl";
+  const maxScroll = tabsList.scrollWidth - tabsList.clientWidth;
+
+  if (isRTL) {
+    return {
+      current: Math.abs(tabsList.scrollLeft),
+      max: maxScroll,
+    };
+  }
+
+  return {
+    current: tabsList.scrollLeft,
+    max: maxScroll,
+  };
+};
+
+// Manage arrow visibility
 const manageArrows = () => {
-  if (tabsList.scrollLeft <= 0) {
-    rightArrow.classList.add("active");
-  } else {
-    rightArrow.classList.remove("active");
-  }
+  const { current, max } = getScrollPosition();
 
-  let maxScrollValue = tabsList.clientWidth - tabsList.scrollWidth;
-
-  if (tabsList.scrollLeft != maxScrollValue) {
-    leftArrow.classList.add("active");
-    console.log("yes");
-  } else {
-    leftArrow.classList.remove("active");
-    console.log("no");
-  }
-};
-
-leftArrow.addEventListener("click", () => {
-  tabsList.scrollLeft -= 200;
-  manageArrows();
-});
-rightArrow.addEventListener("click", () => {
-  tabsList.scrollLeft += 200;
-  manageArrows();
-});
-
-tabsList.addEventListener("scroll", manageArrows);
-
-/* const manageArrows = () => {
-  let maxScrollValue = tabsList.scrollWidth - tabsList.clientWidth; // The max scrollable width
-
-  // Remove or show the left arrow when at the leftmost position
-  if (tabsList.scrollLeft <= 0) {
+  if (current <= 0) {
     leftArrow.classList.remove("active");
   } else {
     leftArrow.classList.add("active");
   }
 
-  // Remove or show the right arrow when at the rightmost position
-  if (tabsList.scrollLeft >= maxScrollValue) {
+  if (current >= max) {
     rightArrow.classList.remove("active");
   } else {
     rightArrow.classList.add("active");
   }
-
-  // Debugging logs
-  console.log("Current scroll position: ", tabsList.scrollLeft);
-  console.log("Max scroll value: ", maxScrollValue);
 };
 
+// Scroll actions with smooth animation
 leftArrow.addEventListener("click", () => {
-  tabsList.scrollLeft -= 200;  // Scroll 200px to the left
-  manageArrows();  // Update arrows based on new scroll position
+  const scrollAmount = 500; // Increased scroll distance for larger movement
+  const isRTL = getComputedStyle(tabsList).direction === "rtl";
+
+  tabsList.scrollBy({
+    left: isRTL ? scrollAmount : -scrollAmount,
+    behavior: "smooth", // Smooth scrolling effect
+  });
+
+  setTimeout(manageArrows, 50);
 });
 
 rightArrow.addEventListener("click", () => {
-  tabsList.scrollLeft += 200;  // Scroll 200px to the right
-  manageArrows();  // Update arrows based on new scroll position
+  const scrollAmount = 500; // Increased scroll distance for larger movement
+  const isRTL = getComputedStyle(tabsList).direction === "rtl";
+
+  tabsList.scrollBy({
+    left: isRTL ? -scrollAmount : scrollAmount,
+    behavior: "smooth", // Smooth scrolling effect
+  });
+
+  setTimeout(manageArrows, 50);
 });
 
-// Listen to the scroll event on the container to dynamically update the arrows
+// Handle manual scrolling
 tabsList.addEventListener("scroll", manageArrows);
 
-// Initial check to hide/show arrows based on current scroll position
-manageArrows(); */
+// Initialize arrows on page load
+document.addEventListener("DOMContentLoaded", manageArrows);
+
+
 
 // //////////////////////////////////////////////////////////////////////////////////////
 
@@ -187,7 +187,6 @@ function fillContentLg(x) {
   contentParent.innerHTML += content;
 }
 
-// fill content in small screen
 
 
 // show content on click
@@ -261,3 +260,29 @@ listItems.forEach(function (category, index) {
   accordionContainer.innerHTML += accordionItem;
 });
 // 
+
+
+
+
+
+
+
+
+// Get DOM elements
+const openPageBtn = document.getElementById("openPageBtn");
+const closePageBtn = document.getElementById("closePageBtn");
+const fullscreenPage = document.getElementById("fullscreenPage");
+
+// Open fullscreen page when button is clicked
+openPageBtn.addEventListener("click", () => {
+  // Check if screen is smaller than lg
+  if (window.innerWidth <= 991) {
+    fullscreenPage.classList.add("open");
+  }
+});
+
+// Close fullscreen page when close button is clicked
+closePageBtn.addEventListener("click", () => {
+  fullscreenPage.classList.remove("open");
+});
+

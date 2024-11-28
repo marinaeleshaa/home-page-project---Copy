@@ -8,9 +8,8 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -23,24 +22,14 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg p-0 px-xl-5">
       <div class="container-fluid container-xxl p-0 px-xxl-5">
+        <!-- nav icon -->
         <a class="navbar-brand" href="#">
           <img style="height: 80px" src="img/nav-img.png" alt="" />
         </a>
-        <button
-          class="navbar-toggler ms-4 border-0 rounded-circle p-2"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars fs-1"></i>
-        </button>
-
+        <!-- nav icon -->
+        <!-- nav on screen bigger than lg -->
         <div
           class="collapse navbar-collapse justify-content-between me-5 mx-xl-5"
-          id="navbarNav"
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
@@ -56,9 +45,9 @@
             >
               <i class="fa-regular fa-user"></i> تسجيل الدخول
             </button>
-            <div class="dropdown">
+            <div class="dropdown ">
               <button
-                class="btn rounded-5 px-3 p-2 text-black text-dark dropdown-toggle ms-4 ms-xl-0"
+                class="btn rounded-5 px-3 p-2 text-black text-dark dropdown-toggle ms-4 ms-xl-0 border-0"
                 style="background-color: var(--light)"
                 type="button"
                 data-bs-toggle="dropdown"
@@ -66,7 +55,7 @@
               >
                 <i class="fa-solid fa-bars mx-1"></i>المزيد
               </button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu border-0 ms-3">
                 <li>
                   <a
                     class="dropdown-item disabled text-secondary text-end"
@@ -91,6 +80,99 @@
             </div>
           </div>
         </div>
+        <!-- nav on screen bigger than lg -->
+
+        <!-- burger icon -->
+        <button
+          class="navbar-toggler ms-4 border-0 rounded-circle p-2"
+          type="button"
+          id="openPageBtn"
+        >
+          <i class="fa-solid fa-bars fs-1"></i>
+        </button>
+        <!-- burger icon -->
+
+        <!-- the page open by burger icon -->
+        <div
+          id="fullscreenPage"
+          class="fullscreen-page p-4 bg-white position-fixed top-0 w-100"
+        >
+        <!-- head -->
+          <div class="d-flex justify-content-between">
+            <h2 style="color: rgb(28, 48, 76); font-size: 23px" class="fw-bold">
+              المزيد
+            </h2>
+            <button id="closePageBtn" class="close-btn border-0 fs-3">
+              <i class="fa-solid fa-xmark" style="color: #1c304c"></i>
+            </button>
+          </div>
+          <!-- line -->
+          <div class="bg-black my-4 w-100" style="height: 2px"></div>
+          <!-- line -->
+
+          <!-- login btn -->
+          <button
+            class="btn rounded-5 px-3 p-2 text-white fw-bold text-nowrap col-12"
+          >
+            <i class="fa-regular fa-user ms-2"></i> تسجيل الدخول
+          </button>
+          <!-- login btn -->
+          <!-- First Section -->
+          <div class="">
+            <p class="my-4">القائمة الرئيسية</p>
+            <div>
+              <div class="d-flex justify-content-between">
+                <p style="color: rgb(28, 48, 76)" class="fw-bold">
+                  تصفح الخدمات
+                </p>
+                <a href=""><i class="fa-solid fa-angle-left"></i></a>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p style="color: rgb(28, 48, 76)" class="fw-bold">
+                  دليل الجهات الحكومية
+                </p>
+                <a href=""><i class="fa-solid fa-angle-left"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- First Section -->
+
+          <!-- Second Section -->
+          <div class="">
+            <p class="my-4">المزيد</p>
+            <div>
+              <!-- item -->
+              <div class="d-flex justify-content-between">
+                <p style="color: rgb(28, 48, 76)" class="fw-bold">
+                  الأسئلة الشائعة
+                </p>
+                <a href=""><i class="fa-solid fa-angle-left"></i></a>
+              </div>
+              <!-- item -->
+              <div class="d-flex justify-content-between">
+                <p style="color: rgb(28, 48, 76)" class="fw-bold">
+                  الشكاوى و المقترحات
+                </p>
+                <a href=""><i class="fa-solid fa-angle-left"></i></a>
+              </div>
+              <!-- item -->
+              <div class="d-flex justify-content-between">
+                <p style="color: rgb(28, 48, 76)" class="fw-bold">
+                  سياسة الخصوصية
+                </p>
+                <a href=""><i class="fa-solid fa-angle-left"></i></a>
+              </div>
+              <!-- item -->
+              <div class="d-flex justify-content-between">
+                <p style="color: rgb(28, 48, 76)" class="fw-bold">
+                  عن مصر الرقمية
+                </p>
+                <a href=""><i class="fa-solid fa-angle-left"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- the page open by burger icon -->
       </div>
     </nav>
 
@@ -185,7 +267,7 @@
         >
           <!-- Item 1 -->
           <div
-            class="option-item option-item-1 col-lg-6 col-12 col-md-10  col-xl-5 d-flex justify-content-start align-items-center gap-2 p-3 bg-white shadow-sm rounded-4"
+            class="option-item option-item-1 col-lg-6 col-12 col-md-10 col-xl-5 d-flex justify-content-start align-items-center gap-2 p-3 bg-white shadow-sm rounded-4"
           >
             <div
               class="circle-icon circle-icon-1 d-flex justify-content-center align-items-center rounded-circle"
@@ -216,7 +298,6 @@
         </div>
       </div>
     </section>
-
     <!-- end 2 options div -->
 
     <!-- اريد معرفه المزيد عن -->
@@ -391,11 +472,12 @@
             <div class="container mt-5 p-0">
               <div
                 class="scrollable-tabs-container bg-white rounded p-3 overflow-hidden position-relative d-flex align-items-center"
+                style="direction: rtl"
               >
-                <!-- Right Arrow -->
+                <!-- Left Arrow -->
                 <div
-                  class="right-arrow rounded-circle border-secondary border p-2 h-100 align-items-center bg-white"
-                  style="cursor: pointer; z-index: 2"
+                  class="left-arrow rounded-circle border-secondary border p-2 h-100 align-items-center bg-white"
+                  style="cursor: pointer; z-index: 2; display: none"
                 >
                   <i class="fa-solid fa-angle-right fs-5 text-dark"></i>
                 </div>
@@ -404,6 +486,7 @@
                 <ul
                   class="d-flex m-0 align-items-center overflow-x-scroll"
                   id="tabs-list"
+                  style="direction: rtl"
                 >
                   <li>
                     <button
@@ -416,9 +499,9 @@
                   </li>
                 </ul>
 
-                <!-- Left Arrow -->
+                <!-- Right Arrow -->
                 <div
-                  class="left-arrow rounded-circle border-secondary border p-2 h-100 align-items-center bg-white active"
+                  class="right-arrow rounded-circle border-secondary border p-2 h-100 align-items-center bg-white"
                   style="cursor: pointer; z-index: 2"
                 >
                   <i class="fa-solid fa-chevron-left fs-5 text-dark"></i>
@@ -1258,11 +1341,8 @@
       </div>
     </footer>
     <!-- footer -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
     <script src="js/all.js"></script>
