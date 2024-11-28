@@ -11,31 +11,36 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg p-0 px-lg-5">
-      <div class="container-fluid container-xl p-0 px-lg-5">
-        <a class="navbar-brand" href="#"
-          ><img style="height: 80px" src="img/nav-img.png" alt=""
-        /></a>
+    <nav class="navbar navbar-expand-lg p-0 px-xl-5">
+      <div class="container-fluid container-xxl p-0 px-xxl-5">
+        <a class="navbar-brand" href="#">
+          <img style="height: 80px" src="img/nav-img.png" alt="" />
+        </a>
         <button
-          class="navbar-toggler ms-4 border-0"
+          class="navbar-toggler ms-4 border-0 rounded-circle p-2"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa-solid fa-bars fs-1"></i>
         </button>
 
         <div
-          class="collapse navbar-collapse justify-content-between mx-5"
-          id="navbarText"
+          class="collapse navbar-collapse justify-content-between me-5 mx-xl-5"
+          id="navbarNav"
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
@@ -45,16 +50,45 @@
               <a class="nav-link" href="#">دليل الجهات الحكومية</a>
             </li>
           </ul>
-          <div class="d-flex column-gap-4">
-            <button class="btn rounded-5 px-3 p-2 text-white fw-bold">
+          <div class="d-flex column-gap-4 align-items-center">
+            <button
+              class="btn rounded-5 px-3 p-2 text-white fw-bold text-nowrap"
+            >
               <i class="fa-regular fa-user"></i> تسجيل الدخول
             </button>
-            <button
-              class="btn rounded-5 px-3 p-2 text-black text-dark"
-              style="background-color: var(--light)"
-            >
-              <i class="fa-solid fa-bars mx-1"></i>المزيد
-            </button>
+            <div class="dropdown">
+              <button
+                class="btn rounded-5 px-3 p-2 text-black text-dark dropdown-toggle ms-4 ms-xl-0"
+                style="background-color: var(--light)"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-bars mx-1"></i>المزيد
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item disabled text-secondary text-end"
+                    href="#"
+                  >
+                    المزيد
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-end" href="#">الاسئلة الشائعة</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-end" href="#">شكاوي ومقترحات</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-end" href="#">سياسة الخصوصيه</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-end" href="#">عن مصر الرقمية</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -147,43 +181,42 @@
     <section>
       <div class="container-fluid container-xl p-0">
         <div
-          class="d-flex justify-content-center gap-1 option-parent align-items-center flex-column flex-lg-row py-5 py-md-0"
+          class="option-parent d-flex justify-content-center align-items-center gap-1 flex-column flex-lg-row py-3 px-4 py-lg-0"
         >
-          <!-- item 1 -->
+          <!-- Item 1 -->
           <div
-            class="d-flex justify-content-start align-items-center gap-4 bg-white shadow-sm option-item-1 rounded-5 col-lg-6 col-sm-10 col-md-9 justify-content-lg-center p-2 col-xl-5"
+            class="option-item option-item-1 col-lg-6 col-12 col-md-10  col-xl-5 d-flex justify-content-start align-items-center gap-2 p-3 bg-white shadow-sm rounded-4"
           >
             <div
-              class="rounded-circle circle-icon-1 d-flex justify-content-center align-items-center"
+              class="circle-icon circle-icon-1 d-flex justify-content-center align-items-center rounded-circle"
             >
               <i class="fa-regular fa-user fs-1 icon text-white"></i>
             </div>
             <div>
               <h4>افتح حساب أو سجِّل الدخول</h4>
-              <p class="text-secondary mt-lg-3 mt-1" style="font-size: 18px">
+              <p class="text-secondary mt-lg-3 mt-1">
                 اشترك وكن جزءاً من مصر الرقمية
               </p>
             </div>
           </div>
-          <!-- item 2 -->
+          <!-- Item 2 -->
           <div
-            class="d-flex justify-content-start align-items-center gap-4 bg-white shadow-sm option-item-2 rounded-5 col-lg-6 col-sm-10 col-md-9 p-2 justify-content-lg-center col-xl-5"
+            class="option-item option-item-2 col-lg-6 col-12 col-md-10 col-xl-5 d-flex justify-content-start align-items-center gap-4 p-3 bg-white shadow-sm rounded-4"
           >
             <div
-              class="rounded-circle circle-icon-2 d-flex justify-content-center align-items-center"
+              class="circle-icon circle-icon-2 d-flex justify-content-center align-items-center rounded-circle"
             >
               <i class="fa-solid fa-plus fs-1 icon text-white"></i>
             </div>
             <div>
               <h4>تصفح كل الخدمات</h4>
-              <p class="text-secondary" style="font-size: 18px">
-                تصفح جميع خدمات مصر الرقمية الآن
-              </p>
+              <p class="text-secondary">تصفح جميع خدمات مصر الرقمية الآن</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- end 2 options div -->
 
     <!-- اريد معرفه المزيد عن -->
