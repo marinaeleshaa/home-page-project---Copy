@@ -42,10 +42,12 @@
           <div class="d-flex column-gap-4 align-items-center">
             <button
               class="btn rounded-5 px-3 p-2 text-white fw-bold text-nowrap"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
             >
               <i class="fa-regular fa-user"></i> تسجيل الدخول
             </button>
-            <div class="dropdown ">
+            <div class="dropdown">
               <button
                 class="btn rounded-5 px-3 p-2 text-black text-dark dropdown-toggle ms-4 ms-xl-0 border-0"
                 style="background-color: var(--light)"
@@ -97,7 +99,7 @@
           id="fullscreenPage"
           class="fullscreen-page p-4 bg-white position-fixed top-0 w-100"
         >
-        <!-- head -->
+          <!-- head -->
           <div class="d-flex justify-content-between">
             <h2 style="color: rgb(28, 48, 76); font-size: 23px" class="fw-bold">
               المزيد
@@ -113,6 +115,8 @@
           <!-- login btn -->
           <button
             class="btn rounded-5 px-3 p-2 text-white fw-bold text-nowrap col-12"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
           >
             <i class="fa-regular fa-user ms-2"></i> تسجيل الدخول
           </button>
@@ -175,6 +179,89 @@
         <!-- the page open by burger icon -->
       </div>
     </nav>
+    <!-- navbar -->
+
+    <!-- login form -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header justify-content-end d-flex border-0">
+            <button
+              type="button"
+              class="btn-close m-0"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body d-flex flex-column  align-items-center"
+          >
+            <h1 class="modal-title fs-2 sw-bold" id="staticBackdropLabel">
+              أهلاً! سجِّل الدخول
+            </h1>
+            <p class="mt-2">
+              ليس لديك حساب؟
+              <a href="" style="color: var(--a-color) !important"
+                >افتح حساب جديد</a
+              >
+            </p>
+            <!-- form body -->
+            <form class="shadow-lg p-4 mb-5 rounded-5 col-10">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label fw-bold"
+                  >الموبايل <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div
+                  id="textHelp"
+                  class="form-text fs-6"
+                  style="color: var(--a-color) !important"
+                >
+                  تغيير رقم الموبايل !
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label fw-bold"
+                  >كلمة المرور <span class="text-danger">*</span></label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div
+                  id="passwordHelp"
+                  class="form-text fs-6"
+                  style="color: var(--a-color) !important"
+                >
+                  نسيت كلمه المرور؟
+                </div>
+              <button type="submit" class="btn rounded-5 text-white col-12 mt-5">
+                تسجيل الدخول
+              </button>
+            </form>
+            <!-- form body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login form -->
 
     <!-- main -->
     <main style="background-color: var(--light)" class="pb-5 position-relative">
@@ -515,7 +602,7 @@
           <div class="container-md px-xl-4">
             <div class="px-4 row mx-3 mt-2 mx-xl-0" id="services-content">
               <!-- item in lg screen -->
-              <div class="col-xl-4 col-12 ">
+              <div class="col-xl-4 col-12">
                 <a href="">
                   <div class="px-3 py-4 rounded-4 h-100">
                     <p class="fw-light" style="color: #1c304c; font-size: 18px">
