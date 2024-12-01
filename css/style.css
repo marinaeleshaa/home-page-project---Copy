@@ -354,3 +354,10 @@ ul {
     padding: 160px 0px !important;
   }
 }
+
+
+
+.disabled-div {
+  opacity: 0.5; /* Make it appear visually disabled */
+  pointer-events: none; /* Prevent interaction */
+}

@@ -166,12 +166,17 @@ function setDefault(data) {
   data.map((item) => {
     fillContentLg(item);
   });
+
+  // Adding 7 additional divs for the Supply tab
+  if (data === Supply) {
+    disabledContent()
+  }
 }
 setDefault(Supply);
 
 // fill content in lg screens
 function fillContentLg(x) {
-  let content = `<div class="col-xl-4 col-lg-6 justify-content-lg-between d-lg-flex d-none d-lg-inline-block px-0">
+  let content = `<div class="col-xl-4 col-lg-6 justify-content-lg-between d-lg-flex d-none d-lg-inline-block px-0 ">
                 <a href="${x.url}">
                   <div
                     class=" px-3 py-4 rounded-4 h-100"
@@ -195,6 +200,28 @@ function setContent(id) {
   allbuttons[id].map((i) => {
     fillContentLg(i);
   });
+
+  // Adding 7 additional divs for the Supply tab
+  if (id === 0) { // Assuming Supply is the first tab
+    disabledContent()
+  }
+}
+
+function disabledContent(){
+  for (let i = 0; i < 7; i++) {
+    let additionalDiv = `
+      <div class="col-xl-4 col-lg-6 justify-content-lg-between d-lg-flex d-none d-lg-inline-block px-0 disabled-div">
+  <a href="#" tabindex="-1" aria-disabled="true">
+    <div class="px-3 py-4 rounded-4 h-100">
+      <p class="fw-light" style="color: #1c304c; font-size: 18px;">Coming Soon</p>
+      <p class="text-secondary">Details will be available shortly.</p>
+      <button class="btn text-white rounded-5" >تأتيكم قريبا</button>
+    </div>
+  </a>
+</div>
+`;
+    contentParent.innerHTML += additionalDiv;
+  }
 }
 
 // accordion in small screen
@@ -268,7 +295,6 @@ listItems.forEach(function (category, index) {
 
 
 
-// Get DOM elements
 const openPageBtn = document.getElementById("openPageBtn");
 const closePageBtn = document.getElementById("closePageBtn");
 const fullscreenPage = document.getElementById("fullscreenPage");
