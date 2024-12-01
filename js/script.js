@@ -14,13 +14,13 @@ const getScrollPosition = () => {
   if (isRTL) {
     return {
       current: Math.abs(tabsList.scrollLeft),
-      max: maxScroll,
+      max: maxScroll
     };
   }
 
   return {
     current: tabsList.scrollLeft,
-    max: maxScroll,
+    max: maxScroll
   };
 };
 
@@ -48,7 +48,7 @@ leftArrow.addEventListener("click", () => {
 
   tabsList.scrollBy({
     left: isRTL ? scrollAmount : -scrollAmount,
-    behavior: "smooth", // Smooth scrolling effect
+    behavior: "smooth" // Smooth scrolling effect
   });
 
   setTimeout(manageArrows, 50);
@@ -60,7 +60,7 @@ rightArrow.addEventListener("click", () => {
 
   tabsList.scrollBy({
     left: isRTL ? -scrollAmount : scrollAmount,
-    behavior: "smooth", // Smooth scrolling effect
+    behavior: "smooth" // Smooth scrolling effect
   });
 
   setTimeout(manageArrows, 50);
@@ -71,8 +71,6 @@ tabsList.addEventListener("scroll", manageArrows);
 
 // Initialize arrows on page load
 document.addEventListener("DOMContentLoaded", manageArrows);
-
-
 
 // //////////////////////////////////////////////////////////////////////////////////////
 
@@ -169,7 +167,7 @@ function setDefault(data) {
 
   // Adding 7 additional divs for the Supply tab
   if (data === Supply) {
-    disabledContent()
+    disabledContent();
   }
 }
 setDefault(Supply);
@@ -192,8 +190,6 @@ function fillContentLg(x) {
   contentParent.innerHTML += content;
 }
 
-
-
 // show content on click
 function setContent(id) {
   contentParent.innerHTML = "";
@@ -202,12 +198,15 @@ function setContent(id) {
   });
 
   // Adding 7 additional divs for the Supply tab
-  if (id === 0) { // Assuming Supply is the first tab
-    disabledContent()
+  if (id === 0) {
+    // Assuming Supply is the first tab
+    disabledContent();
   }
 }
 
-function disabledContent(){
+// disabled div
+
+function disabledContent() {
   for (let i = 0; i < 7; i++) {
     let additionalDiv = `
       <div class="col-xl-4 col-lg-6 justify-content-lg-between d-lg-flex d-none d-lg-inline-block px-0 disabled-div">
@@ -227,16 +226,71 @@ function disabledContent(){
 // accordion in small screen
 
 var accordionContainer = document.getElementById("accordionForOptions");
-accordionContainer.innerHTML ="";
-
+accordionContainer.innerHTML = "";
 
 listItems.forEach(function (category, index) {
   var categoryData = allbuttons[index];
-
   var itemId = "flush-collapse" + (index + 1);
+
+  // Define the "Coming Soon" content
+  var comingSoonContent = `
+    <div class="disabled-div">
+          <a href="">
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <p class="m-0" style="color: #1c304c;">Coming Soon</p>
+                <p class="m-0 text-secondary"> Details will be available shortly.</p>
+                <button class="btn text-white rounded-5 mt-3">تأتيكم قريبا</button>
+              </div>
+              <div>
+                <i class="fa-solid fa-angle-left fs-4"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+  `;
+
+  // Log the category being processed for debugging
+  console.log(`Processing category: ${category}`);
+
+  // Define the body content for the accordion
+  var accordionBodyContent = categoryData
+    .map(
+      (item) => `
+        <div>
+          <a href="${item.url}">
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <p class="m-0" style="color: #1c304c;">${item.title}</p>
+                <p class="m-0 text-secondary">${item.body}</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-angle-left fs-4"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      `
+    )
+    .join("");
+
+  // If it's the first category, repeat the "Coming Soon" content 5 times
+  if (index === 0) {
+    console.log("Adding 'Coming Soon' content 5 times to the first category");
+    
+    let repeatedComingSoonContent = '';
+    for (let i = 0; i < 5; i++) {
+      repeatedComingSoonContent += comingSoonContent;
+    }
+    
+    // Append the repeated "Coming Soon" content to the accordion body
+    accordionBodyContent =  accordionBodyContent + repeatedComingSoonContent;
+  }
+
+  // Define the accordion item
   var accordionItem = `
-    <div class="accordion-item border-dark  border-1 d-block d-lg-none">
-      <h2 class="accordion-header ">
+    <div class="accordion-item border-dark border-1 d-block d-lg-none">
+      <h2 class="accordion-header">
         <button
           class="accordion-button collapsed justify-content-between custom-arrow flex-row-reverse fs-6 px-0"
           type="button"
@@ -244,7 +298,7 @@ listItems.forEach(function (category, index) {
           data-bs-target="#${itemId}"
           aria-expanded="false"
           aria-controls="${itemId}"
-          style="background-color:var(--light) ; font-weight:600;"
+          style="background-color:var(--light); font-weight:600;"
         >
           ${category}
         </button>
@@ -253,46 +307,19 @@ listItems.forEach(function (category, index) {
         id="${itemId}"
         class="accordion-collapse collapse"
         data-bs-parent="#accordionForOptions"
-        style="background-color:var(--light)"
+        style="background-color:var(--light);"
       >
         <div class="accordion-body border-top border-dark">
           <!-- Dynamic child items -->
-          ${categoryData
-            .map(
-              (item) => `
-                <div>
-                  <a href="${item.url}">
-                    <div
-                      class="d-flex justify-content-between align-items-center mt-3"
-                    >
-                      <div>
-                        <p class="m-0" style="color: #1c304c;">${item.title}</p>
-                        <p class="m-0 text-secondary">${item.body}</p>
-                      </div>
-                      <div>
-                        <i class="fa-solid fa-angle-left fs-4"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              `
-            )
-            .join("")}
+          ${accordionBodyContent}
         </div>
       </div>
     </div>
   `;
 
-  // Append to the accordion container
+  // Append the accordion item to the container
   accordionContainer.innerHTML += accordionItem;
 });
-// 
-
-
-
-
-
-
 
 
 const openPageBtn = document.getElementById("openPageBtn");
@@ -311,4 +338,3 @@ openPageBtn.addEventListener("click", () => {
 closePageBtn.addEventListener("click", () => {
   fullscreenPage.classList.remove("open");
 });
-
